@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "dllist.h"
+#include "../include/dllist.h"
 
 int main(int argc, const char *argv[]) {
 	Node *head = NULL;

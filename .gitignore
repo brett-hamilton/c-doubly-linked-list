@@ -1,2 +1,8 @@
+# ignore all files in any directory named obj
+obj/
+
 # ignore executable file
 program
+
+# misc
+.DS_STORE
