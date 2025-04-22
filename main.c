@@ -61,6 +61,26 @@ void insertAtEnd(Node **head, char *value, int size) {
 	newNode->previous = temp;		// Point new Node to last Node
 }
 
+void insertAtBeginning(Node **head, char *value, int size) {
+	Node *newNode = createNode(value, size);
+
+	if (newNode == NULL) {
+		printf("[ERROR] Could not create Node.\n");
+		return;
+	}
+
+	// Check if the head exists yet
+	if (*head == NULL) {
+		*head = newNode;
+		return;
+	}
+
+	newNode->next = *head;
+    (*head)->previous = newNode;
+    *head = newNode;
+
+}
+
 // Print list of values of Nodes
 void printList(Node *node) {
     while (node->next != NULL) {
@@ -81,7 +101,11 @@ int main(int argc, const char *argv[]) {
 	size = strlen(sourceString) + 1;
 	insertAtEnd(&head, sourceString, size);
 
+	sourceString = "Third string";
+	size = strlen(sourceString) + 1;
+	insertAtBeginning(&head, sourceString, size);
+
 	printList(head);
-	
+
 	return 0;
 }
