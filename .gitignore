@@ -1,5 +1,5 @@
-# ignore all files in any directory named obj
-obj/
+# ignore all object files
+*.o
 
 # ignore executable file
 program
