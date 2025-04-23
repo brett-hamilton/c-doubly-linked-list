@@ -13,6 +13,7 @@ struct node {
 Node* createNode(char *value, int size);
 void insertAtEnd(Node **head, char *value, int size);
 void insertAtBeginning(Node **head, char *value, int size);
-void printList(Node *node);
+void traverseForward(Node *head);
+void traverseBackward(Node *head);
 
 #endif

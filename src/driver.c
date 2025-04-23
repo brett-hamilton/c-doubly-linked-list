@@ -25,7 +25,7 @@ int main(int argc, const char *argv[]) {
 	size = strlen(sourceString) + 1;
 	insertAtBeginning(&head, sourceString, size);
 
-	printList(head);
-
+	traverseForward(head);
+	
 	return 0;
 }

@@ -86,11 +86,11 @@ void insertAtBeginning(Node **head, char *value, int size) {
 
 }
 
-// Print list of values of Nodes
-void printList(Node *node) {
-    while (node->next != NULL) {
-        printf("%s | ", node->value);
-        node = node->next;
+// Print list of values of Nodes, starting at head
+void traverseForward(Node *head) {
+    while (head->next != NULL) {
+        printf("%s | ", head->value);
+        head = head->next;
     }
-    printf("%s\n", node->value);
+    printf("%s\n", head->value);
 }
