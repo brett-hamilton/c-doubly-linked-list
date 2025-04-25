@@ -19,6 +19,7 @@ struct node {
 
 };
 
+// Creates a Node with a given string value
 Node* createNode(char *value, int size) {
 	char *targetString;
 
@@ -43,6 +44,7 @@ Node* createNode(char *value, int size) {
 	return newNode;
 }
 
+// Inserts a Node at the end of the list
 void insertAtEnd(Node **head, char *value, int size) {
 	Node *newNode = createNode(value, size);
 
@@ -66,6 +68,7 @@ void insertAtEnd(Node **head, char *value, int size) {
 	newNode->previous = temp;		// Point new Node to last Node
 }
 
+// Inserts a Node at the beginning of the list
 void insertAtBeginning(Node **head, char *value, int size) {
 	Node *newNode = createNode(value, size);
 
