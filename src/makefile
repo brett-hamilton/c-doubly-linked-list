@@ -11,7 +11,7 @@ _OBJ = driver.o dllist.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)
-	@mkdir -p $(@D)
+	@mkdir -p $(@D) # create the obj directory
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 program: $(OBJ)
